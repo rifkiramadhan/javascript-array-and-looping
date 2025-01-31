@@ -18,3 +18,26 @@
     8 2 8 2 8 2 8 2 8
     9 1 9 1 9 1 9 1 9
 */
+
+const ShowPattern = n => {
+  for (let i = 1; i <= n; i++) {
+    let line = '';
+
+    for (let j = 1; j <= n; j++) {
+      const kiri = i;
+      const kanan = n - i + 1;
+
+      line += j % 2 !== 0 ? `${kiri} ` : `${kanan} `;
+    }
+
+    console.log(line.trim());
+  }
+};
+
+const runChallenge = () => {
+  ShowPattern(5);
+  console.log();
+  ShowPattern(9);
+};
+
+runChallenge();

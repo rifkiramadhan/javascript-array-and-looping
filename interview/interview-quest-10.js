@@ -14,3 +14,38 @@
     4 5 6 7
     5 6 7 8 9
 */
+
+const ShowPatternOne = n => {
+  for (let i = 1; i <= n; i++) {
+    let line = '';
+
+    for (let j = 1; j <= i; j++) {
+      line += ` ${j} `;
+    }
+
+    console.log(line);
+  }
+};
+
+const ShowPatternTwo = n => {
+  let count = 1;
+
+  for (let i = 0; i < n; i++) {
+    let line = '';
+
+    for (let j = 0; j <= i; j++) {
+      line += ` ${count + j} `;
+    }
+    count++;
+
+    console.log(line);
+  }
+};
+
+const runChallenge = () => {
+  ShowPatternOne(5);
+  console.log();
+  ShowPatternTwo(5);
+};
+
+runChallenge();
